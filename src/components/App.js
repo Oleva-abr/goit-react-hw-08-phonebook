@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
 import { connect } from 'react-redux';
-import { contactsOperations, contactsSelectors } from '../../redux/contacts';
+import { contactsOperations, contactsSelectors } from '../redux/contacts';
 
 class App extends Component {
   componentDidMount() {

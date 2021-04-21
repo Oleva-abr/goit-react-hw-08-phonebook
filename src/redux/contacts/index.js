@@ -1,5 +1,5 @@
-export { default as contactsActions } from './phonebook-actions';
+export { default as contactsActions } from './phoneBookAction';
 
-export { default as contactsOperations } from './phonebook-operations';
+export { default as contactsOperations } from './phoneBookOperations';
 
-export { default as contactsSelectors } from './phonebook-selectors';
+export { default as contactsSelectors } from './phoneBookSelectors';
