@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import style from './contactForm.module.css';
 import { connect } from 'react-redux';
-import selector from '../../redux/phoneBookSelectors';
+import selector from '../../redux/contacts/phoneBookSelectors';
 
-import operations from '../../redux/phoneBookOperations';
+import operations from '../../redux/contacts/phoneBookOperations';
 
 class ContactForm extends Component {
   static propTypes = {
@@ -27,6 +27,10 @@ class ContactForm extends Component {
     e.preventDefault();
     const { name, number } = this.state;
     const { contacts, onSubmit } = this.props;
+    if (contacts.some(elm => elm.name.toLowerCase() === name.toLowerCase())) {
+      return alert(`${name} is already in contacts`);
+    }
+
     onSubmit(this.state);
     this.reset();
   };

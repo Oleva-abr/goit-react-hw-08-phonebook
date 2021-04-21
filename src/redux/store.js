@@ -11,7 +11,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-import phonebookReducer from './phoneBookReducer';
+import phonebookReducer from './contacts/phoneBookReducer';
 
 const middleware = [
   ...getDefaultMiddleware({

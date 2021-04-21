@@ -1,8 +1,8 @@
 import style from './contactList.module.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import selector from '../../redux/phoneBookSelectors';
-import operations from '../../redux/phoneBookOperations';
+import selector from '../../redux/contacts/phoneBookSelectors';
+import operations from '../../redux/contacts/phoneBookOperations';
 
 const ContactList = ({ contacts, onDeleteContact }) => (
   <ul className={style.contactList}>

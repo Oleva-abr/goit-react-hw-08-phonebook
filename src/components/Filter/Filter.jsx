@@ -1,8 +1,8 @@
 import style from './filter.module.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import selector from '../../redux/phoneBookSelectors';
-import actions from '../../redux/phoneBookAction';
+import selector from '../../redux/contacts/phoneBookSelectors';
+import actions from '../../redux/contacts/phoneBookAction';
 
 const Filter = ({ value, onChange }) => (
   <label className={style.filter}>
