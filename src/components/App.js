@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
-import operations from '../redux/contacts/phoneBookOperations';
 import { connect } from 'react-redux';
-import selector from '../redux/contacts/phoneBookSelectors';
+import { contactsOperations, contactsSelectors } from '../../redux/contacts';
+
 class App extends Component {
   componentDidMount() {
     this.props.fetchContacts();
@@ -24,10 +24,10 @@ class App extends Component {
   }
 }
 const mapStateToProps = state => ({
-  isLoadingContacts: selector.getLoading(state),
+  isLoadingContacts: contactsSelectors.getLoading(state),
 });
 const mapDispatchToProps = dispatch => ({
-  fetchContacts: () => dispatch(operations.fetchContacts()),
+  fetchContacts: () => dispatch(contactsOperations.fetchContacts()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
