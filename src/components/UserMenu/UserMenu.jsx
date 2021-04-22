@@ -1,12 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-// Data
-// import { authSelectors, authOperations } from '../../redux/auth';
+import { authSelectors, authOperations } from '../../redux/auth';
 
 // import defaultAvatar from './default-avatar.png';
-
-// Styles
 
 const UserMenu = ({ name, avatar, onLogout }) => {
   return (
@@ -22,13 +19,13 @@ const UserMenu = ({ name, avatar, onLogout }) => {
   );
 };
 
-// const mapStateToProps = state => ({
-//   name: authSelectors.getUsername(state),
-//   //   avatar: defaultAvatar,
-// });
+const mapStateToProps = state => ({
+  name: authSelectors.getUsername(state),
+  //   avatar: defaultAvatar,
+});
 
-// const mapDispatchToProps = {
-//   onLogout: authOperations.logOut,
-// };
+const mapDispatchToProps = {
+  onLogout: authOperations.logOut,
+};
 
-export default connect()(UserMenu); //mapStateToProps, mapDispatchToProps
+export default connect(mapStateToProps, mapDispatchToProps)(UserMenu);

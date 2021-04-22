@@ -58,7 +58,7 @@ class LoginPage extends Component {
 }
 
 const mapDispatchToProps = {
-  onLogin: authOperations.logIn,
+  onLogin: authOperations.LogIn,
 };
 
 export default connect(null, mapDispatchToProps)(LoginPage);
