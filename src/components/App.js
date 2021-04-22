@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
 import { connect } from 'react-redux';
 import { contactsOperations, contactsSelectors } from '../redux/contacts';
+import AppBar from './AppBar/AppBar';
+import RegisterPage from '../pages/RegisterPage';
+import { Route, Switch } from 'react-router';
+import HomePage from '../pages/HomePage';
 
 class App extends Component {
   componentDidMount() {
@@ -12,8 +16,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <AppBar />
-        <Suspense fallback={<p>Loading...</p>}></Suspense> */}
+        <AppBar />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/register" component={RegisterPage} />
+        </Switch>
+        <Suspense fallback={<p>Loading...</p>}></Suspense>
         <h1>Phonebook</h1>
         <ContactForm />
 

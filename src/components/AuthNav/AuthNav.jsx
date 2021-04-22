@@ -10,7 +10,7 @@ const AuthNav = () => {
         // className="nav-link"
         // activeClassName="active-nav-link"
       >
-        Sign up
+        Registration
       </NavLink>
 
       <NavLink
