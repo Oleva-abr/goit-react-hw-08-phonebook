@@ -12,6 +12,8 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/* <AppBar />
+        <Suspense fallback={<p>Loading...</p>}></Suspense> */}
         <h1>Phonebook</h1>
         <ContactForm />
 
