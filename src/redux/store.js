@@ -1,6 +1,7 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 
 import logger from 'redux-logger';
+import { authReducer } from './auth';
 
 import {
   FLUSH,
@@ -26,6 +27,7 @@ const middleware = [
 const store = configureStore({
   reducer: {
     contacts: phonebookReducer,
+    auth: authReducer,
   },
   middleware,
 });

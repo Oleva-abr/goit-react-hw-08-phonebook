@@ -8,6 +8,7 @@ import AppBar from './AppBar/AppBar';
 import RegisterPage from '../pages/RegisterPage';
 import { Route, Switch } from 'react-router';
 import HomePage from '../pages/HomePage';
+import LoginPage from '../pages/LoginPage';
 
 class App extends Component {
   componentDidMount() {
@@ -20,6 +21,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/register" component={RegisterPage} />
+          <Route path="/login" component={LoginPage} />
         </Switch>
         <Suspense fallback={<p>Loading...</p>}></Suspense>
         <h1>Phonebook</h1>

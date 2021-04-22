@@ -21,4 +21,17 @@ const register = credentials => async dispatch => {
   }
 };
 
-export default { register }; // logIn, logOut, getCurrentUser
+//POST
+/// users/login
+const LogIn = credentials => async dispatch => {
+  dispatch(authActions.loginRequest());
+
+  try {
+    const response = await axios.post('/users/login', credentials);
+    // token.set(response.data.token);
+    dispatch(authActions.loginSuccess(response.data));
+  } catch (error) {
+    dispatch(authActions.loginError(error.message));
+  }
+};
+export default { register, LogIn }; //  logOut, getCurrentUser
