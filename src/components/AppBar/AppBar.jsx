@@ -8,18 +8,18 @@ import Navigations from '../Navigations';
 import AuthNav from '../AuthNav';
 import UserMenu from '../UserMenu';
 
-const AppBar = ({ isAuthenticated }) => {
+const AppBar = ({ isAuth }) => {
   return (
     <header>
       <Navigations />
 
-      {isAuthenticated ? <UserMenu /> : <AuthNav />}
+      {isAuth ? <UserMenu /> : <AuthNav />}
     </header>
   );
 };
 
 const mapStateToProps = state => ({
-  isAuthenticated: authSelectors.getIsAuthenticated(state),
+  isAuth: authSelectors.getIsAuthenticated(state),
 });
 
 export default connect(mapStateToProps)(AppBar);

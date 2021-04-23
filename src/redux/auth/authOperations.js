@@ -44,11 +44,11 @@ const LogIn = credentials => async dispatch => {
 };
 //POST
 // /users/logout
-const logOut = credentials => async dispatch => {
+const logOut = () => async dispatch => {
   dispatch(authActions.logoutRequest());
 
   try {
-    await axios.post('/users/logout', credentials);
+    await axios.post('/users/logout');
     token.unset();
     dispatch(authActions.logoutSuccess());
   } catch (error) {
