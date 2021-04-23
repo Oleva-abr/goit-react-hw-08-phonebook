@@ -16,7 +16,7 @@ const Navigation = ({ isAuthenticated }) => {
       >
         Home
       </NavLink>
-      {/* рендер по условию, чтобы страница Заметки не отображалась вообще, если пользователь незалогинен */}
+
       {isAuthenticated && (
         <NavLink
           exact
@@ -31,8 +31,8 @@ const Navigation = ({ isAuthenticated }) => {
   );
 };
 
-// const mapStateToProps = state => ({
-//   isAuthenticated: authSelectors.getIsAuthenticated(state),
-// });
+const mapStateToProps = state => ({
+  isAuthenticated: authSelectors.getIsAuthenticated(state),
+});
 
-export default connect()(Navigation); //mapStateToProps
+export default connect(mapStateToProps)(Navigation);
