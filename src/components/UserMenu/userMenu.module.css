@@ -29,3 +29,7 @@
 .btn:active {
   line-height: 32px;
 }
+.userContent {
+  display: flex;
+  align-items: baseline;
+}

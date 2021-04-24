@@ -4,13 +4,9 @@ import style from './userMenu.module.css';
 
 import { authSelectors, authOperations } from '../../redux/auth';
 
-import defaultAvatar from './defaultAvatar.png';
-
-const UserMenu = ({ name, avatar, onLogout }) => {
+const UserMenu = ({ name, onLogout }) => {
   return (
-    <div>
-      <img src={avatar} alt="" width="32" />
-
+    <div className={style.userContent}>
       <span>Welcome, {name}</span>
 
       <button className={style.btn} type="button" onClick={onLogout}>
@@ -22,7 +18,6 @@ const UserMenu = ({ name, avatar, onLogout }) => {
 
 const mapStateToProps = state => ({
   name: authSelectors.getUsername(state),
-  avatar: defaultAvatar,
 });
 
 const mapDispatchToProps = {

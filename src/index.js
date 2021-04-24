@@ -5,7 +5,7 @@ import store from './redux/store';
 import 'modern-normalize/modern-normalize.css';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-
+import './index.css';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store.store}>
