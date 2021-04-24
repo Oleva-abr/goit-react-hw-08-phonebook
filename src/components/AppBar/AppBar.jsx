@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import style from './appBar.module.css';
 // Data
 import { authSelectors } from '../../redux/auth';
 
@@ -10,8 +10,8 @@ import UserMenu from '../UserMenu';
 
 const AppBar = ({ isAuth }) => {
   return (
-    <header>
-      <Navigations />
+    <header className={style.header}>
+      <Navigations className={style.navigation} />
 
       {isAuth ? <UserMenu /> : <AuthNav />}
     </header>
