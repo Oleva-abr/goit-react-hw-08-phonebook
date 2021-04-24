@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import style from './authNav.module.css';
 
 const AuthNav = () => {
   return (
@@ -7,8 +8,8 @@ const AuthNav = () => {
       <NavLink
         exact
         to="/register"
-        // className="nav-link"
-        // activeClassName="active-nav-link"
+        className={style.link}
+        activeClassName={style.activeLink}
       >
         Registration
       </NavLink>
@@ -16,8 +17,8 @@ const AuthNav = () => {
       <NavLink
         exact
         to="/login"
-        // className="nav-link"
-        // activeClassName="active-nav-link"
+        className={style.link}
+        activeClassName={style.activeLink}
       >
         Login
       </NavLink>
