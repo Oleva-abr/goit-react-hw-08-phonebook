@@ -1,7 +1,5 @@
 import React, { Component, Suspense } from 'react';
-// import ContactForm from './ContactForm';
-// import ContactList from './ContactList';
-// import Filter from './Filter';
+
 import { connect } from 'react-redux';
 import { contactsOperations, contactsSelectors } from '../redux/contacts';
 import AppBar from './AppBar/AppBar';
@@ -25,14 +23,6 @@ class App extends Component {
           <Route path="/login" component={LoginPage} />
           <Route path="/contacts" component={ContactsPage} />
         </Switch>
-        {/* <Suspense fallback={<p>Loading...</p>}></Suspense>
-        <h1>Phonebook</h1>
-        <ContactForm />
-
-        <h2>Contacts</h2>
-        <Filter />
-        {this.props.isLoadingContacts && <h2>Loading...</h2>}
-        <ContactList /> */}
       </div>
     );
   }
