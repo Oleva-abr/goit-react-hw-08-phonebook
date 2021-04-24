@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from 'react';
+import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import { contactsOperations, contactsSelectors } from '../redux/contacts';
@@ -8,6 +8,7 @@ import { Route, Switch } from 'react-router';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import ContactsPage from '../pages/ContactsPage';
+import Container from './Container';
 
 class App extends Component {
   componentDidMount() {
@@ -16,13 +17,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <AppBar />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/register" component={RegisterPage} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/contacts" component={ContactsPage} />
-        </Switch>
+        <Container>
+          <AppBar />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/register" component={RegisterPage} />
+            <Route path="/login" component={LoginPage} />
+            <Route path="/contacts" component={ContactsPage} />
+          </Switch>
+        </Container>
       </div>
     );
   }
