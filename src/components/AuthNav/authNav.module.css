@@ -2,14 +2,14 @@
   display: inline-block;
   padding: 15px;
   text-decoration: none;
-  color: #65a3be;
+  color: #639ce7;
   font-size: 24px;
   font-weight: 700;
 }
 
 .activeLink {
-  color: #002c7e;
-  text-shadow: 2px 2px 8px rgba(9, 125, 145, 0.77);
+  color: #1877f2;
+  text-shadow: 2px 2px 8px rgba(49, 145, 235, 0.77);
 }
 
 .link:hover,

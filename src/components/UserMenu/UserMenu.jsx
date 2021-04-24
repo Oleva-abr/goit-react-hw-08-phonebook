@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import style from './userMenu.module.css';
 
 import { authSelectors, authOperations } from '../../redux/auth';
 
@@ -12,7 +13,7 @@ const UserMenu = ({ name, avatar, onLogout }) => {
 
       <span>Welcome, {name}</span>
 
-      <button type="button" onClick={onLogout}>
+      <button className={style.btn} type="button" onClick={onLogout}>
         Logout
       </button>
     </div>
