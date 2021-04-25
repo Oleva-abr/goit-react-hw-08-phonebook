@@ -33,3 +33,6 @@
   display: flex;
   align-items: baseline;
 }
+.userText {
+  font-size: large;
+}
