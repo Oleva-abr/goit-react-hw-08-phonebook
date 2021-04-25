@@ -3,8 +3,9 @@ import axios from 'axios';
 // Data
 import authActions from './authAction';
 //https://goit-phonebook-api.herokuapp.com/
+//connections-api.herokuapp.com/docs/#/
 
-axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const token = {
   set(token) {

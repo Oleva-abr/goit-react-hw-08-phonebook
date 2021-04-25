@@ -49,8 +49,7 @@ class RegisterPage extends Component {
             value={email}
             onChange={this.handleChange}
           />
-          <label className={style.label} />
-          Password
+          <label className={style.label}>Password</label>
           <input
             className={style.input}
             type="password"
