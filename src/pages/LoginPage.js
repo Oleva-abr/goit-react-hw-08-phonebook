@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import style from '../components/ContactForm/contactForm.module.css';
 import { authOperations } from '../redux/auth';
 
 class LoginPage extends Component {
@@ -27,12 +27,17 @@ class LoginPage extends Component {
 
     return (
       <>
-        <h2>Login Page</h2>
+        <h1>Login Page</h1>
 
-        <form onSubmit={this.handleSubmit} autoComplete="off">
-          <label>Email address</label>
+        <form
+          className={style.loginForm}
+          onSubmit={this.handleSubmit}
+          autoComplete="off"
+        >
+          <label className={style.label}>Email address</label>
 
           <input
+            className={style.input}
             type="email"
             name="email"
             value={email}
@@ -40,9 +45,10 @@ class LoginPage extends Component {
           />
 
           <div>
-            <label>Password</label>
+            <label className={style.label}>Password</label>
 
             <input
+              className={style.input}
               type="password"
               name="password"
               value={password}
@@ -50,7 +56,9 @@ class LoginPage extends Component {
             />
           </div>
 
-          <button type="submit">Submit</button>
+          <button className={style.btn} type="submit">
+            Submit
+          </button>
         </form>
       </>
     );

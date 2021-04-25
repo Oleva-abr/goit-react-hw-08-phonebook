@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
+import style from '../components/ContactForm/contactForm.module.css';
 class RegisterPage extends Component {
   state = {
     name: '',
@@ -28,38 +28,39 @@ class RegisterPage extends Component {
       <div>
         <h1>Register page</h1>
 
-        <form onSubmit={this.handleSubmit} autoComplete="off">
-          <label>
-            Name
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-
-          <label>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
-
-          <label>
-            Password
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </label>
-
-          <button type="submit">Register</button>
+        <form
+          className={style.registerForm}
+          onSubmit={this.handleSubmit}
+          autoComplete="off"
+        >
+          <label className={style.label}>Name</label>
+          <input
+            className={style.input}
+            type="text"
+            name="name"
+            value={name}
+            onChange={this.handleChange}
+          />
+          <label className={style.label}>Email</label>
+          <input
+            className={style.input}
+            type="email"
+            name="email"
+            value={email}
+            onChange={this.handleChange}
+          />
+          <label className={style.label} />
+          Password
+          <input
+            className={style.input}
+            type="password"
+            name="password"
+            value={password}
+            onChange={this.handleChange}
+          />
+          <button className={style.btn} type="submit">
+            Register
+          </button>
         </form>
       </div>
     );

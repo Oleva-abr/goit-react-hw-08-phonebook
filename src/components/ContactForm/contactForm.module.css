@@ -4,7 +4,25 @@
   padding: 20px;
   width: 500px;
   border: 1px solid #5181b8;
-  height: 200px;
+  height: 220px;
+  margin-bottom: 40px;
+}
+.registerForm {
+  border-radius: 5px;
+  background-color: #5181b80e;
+  padding: 20px;
+  width: 500px;
+  border: 1px solid #5181b8;
+  height: 300px;
+  margin-bottom: 40px;
+}
+.loginForm {
+  border-radius: 5px;
+  background-color: #5181b80e;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #5181b8;
+  height: 230px;
   margin-bottom: 40px;
 }
 .label {
@@ -13,7 +31,7 @@
   margin: 10px;
   display: flex;
   flex-direction: column;
-  height: 50px;
+  margin-bottom: 5px;
 }
 
 .btn {
@@ -49,11 +67,14 @@
 }
 
 .input {
+  padding: 5px;
   font-size: 20px;
   margin-left: 10px;
   border-radius: 10px;
   border: 1px solid #5181b8;
+  outline: 0;
+  outline-offset: 0;
 }
 .input:hover {
-  border: 2px solid #5181b8;
+  border: 1px solid lightskyblue;
 }
