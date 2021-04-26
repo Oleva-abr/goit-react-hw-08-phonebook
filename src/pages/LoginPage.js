@@ -16,7 +16,10 @@ class LoginPage extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
+    if (!this.state.email || !this.state.password) {
+      alert('Please fill all the form fields');
+      return;
+    }
     this.props.onLogin(this.state);
 
     this.setState({ email: '', password: '' });
