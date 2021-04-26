@@ -15,7 +15,10 @@ class RegisterPage extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const { name, email } = this.state;
 
+    if (!name) return alert('Please enter contact name');
+    if (!email) return alert('Please enter contact email');
     this.props.onRegister(this.state);
 
     this.setState({ name: '', email: '', password: '' });
