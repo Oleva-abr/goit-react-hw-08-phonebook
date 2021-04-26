@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import Loader from 'react-loader-spinner';
+import Spin from '../components/Spinner';
 import { contactsOperations, contactsSelectors } from '../redux/contacts';
-import style from './style/loader.module.css';
+
 import ContactsForm from '../components/ContactForm';
 
 import Filter from '../components/Filter';
@@ -24,16 +23,7 @@ class ContactsPage extends Component {
 
         <Filter />
 
-        {this.props.isLoadingContacts && (
-          <Loader
-            className={style.spinner}
-            type="ThreeDots"
-            color="#1877f2"
-            height={100}
-            width={100}
-            timeout={3000} //3 secs
-          />
-        )}
+        {this.props.isLoadingContacts && <Spin />}
 
         <ContactList />
       </div>

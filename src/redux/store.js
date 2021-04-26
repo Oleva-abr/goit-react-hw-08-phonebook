@@ -1,6 +1,6 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage'; // local storage
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import { authReducer } from './auth';
 import { contactsReducer } from './contacts';
 
@@ -22,7 +22,7 @@ const middleware = [
     },
   }),
 
-  logger,
+  // logger,
 ];
 const authPersistConfig = {
   key: 'auth',
