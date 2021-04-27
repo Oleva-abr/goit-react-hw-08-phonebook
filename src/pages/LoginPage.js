@@ -23,9 +23,9 @@ class LoginPage extends Component {
     event.preventDefault();
     const { email, password } = this.state;
 
-    if (!email) return alert('Please enter contact email');
+    if (!email) return toast('Please enter contact email');
 
-    if (!password) return alert('Please enter contact password');
+    if (!password) return toast('Please enter contact password');
     this.props.onLogin(this.state);
 
     this.setState({ email: '', password: '' });
