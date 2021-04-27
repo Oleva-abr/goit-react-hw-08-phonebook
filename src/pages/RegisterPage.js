@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import style from '../components/ContactForm/contactForm.module.css';
+
+// import { toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
 class RegisterPage extends Component {
   state = {
     name: '',

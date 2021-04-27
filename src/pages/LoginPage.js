@@ -3,9 +3,13 @@ import { connect } from 'react-redux';
 import style from '../components/ContactForm/contactForm.module.css';
 import { authOperations } from '../redux/auth';
 
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
 class LoginPage extends Component {
   state = {
     email: '',
+
     password: '',
   };
 
@@ -16,10 +20,11 @@ class LoginPage extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { name, email } = this.state;
+    const { email, password } = this.state;
 
-    if (!name) return alert('Please enter contact name');
     if (!email) return alert('Please enter contact email');
+
+    if (!password) return alert('Please enter contact password');
     this.props.onLogin(this.state);
 
     this.setState({ email: '', password: '' });
